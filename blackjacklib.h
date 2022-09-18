@@ -22,7 +22,7 @@ typedef struct Deck {
 deck_t generteDeck();
 
 typedef struct Stack {
-    card cards[312];
+    card Cards[312];
 } stack_t;
 
 typedef struct Table {
