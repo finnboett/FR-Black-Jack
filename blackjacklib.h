@@ -7,16 +7,22 @@
 const int NUMBER_OF_CARDS = 312;
 
 
-enum Color {Diamonds, Hearts, Spades, club};
+enum Color {Diamonds, Hearts, Spades, Club};
 enum Face {A, two, three, four, five, six, seven, eight, nine, ten, J, Q, K};
 
 typedef struct Card {
-    Color color;
-    Face face;
+    enum Color color;
+    enum Face face;
 } card;
 
+typedef struct Deck {
+  card Cards[52];
+} deck_t;
+
+deck_t generteDeck();
+
 typedef struct Stack {
-    card cards[NUMBER_OF_CARDS];
+    card cards[312];
 } stack_t;
 
 typedef struct Table {
