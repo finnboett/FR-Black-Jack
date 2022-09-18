@@ -22,3 +22,5 @@ typedef struct Stack {
 typedef struct Table {
     stack_t Stack;
 } table_t;
+
+stack_t generateStack();
