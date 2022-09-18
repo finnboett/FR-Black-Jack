@@ -1,5 +1,5 @@
-#include blackjacklib.h
+#include "./blackjacklib.h"
 
-Stack generateStack() {
+stack_t generateStack() {
 
 }
