@@ -55,3 +55,5 @@ stack_t *generateStack();
 table_t *generateTable(stack_t *stack);
 
 void drawTable(table_t *table);
+
+int getValue(hand_t *hand);

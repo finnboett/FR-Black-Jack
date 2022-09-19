@@ -34,7 +34,7 @@ stack_t *generateStack() {
     }
     free(deck);
   }
-  return(stack);ashed changes
+  return(stack);
 }
 
 void main(){
@@ -54,8 +54,8 @@ void handOpenCardPlayer(){
   printf(card)
 }
 
-//table_t *generateTable(stack_t *stack) {
-  /*  table_t *table = malloc(sizeof(stack) + 2*21*sizeof(card));
+table_t *generateTable(stack_t *stack) {
+    table_t *table = malloc(sizeof(stack) + 2*21*sizeof(card));
     table->stack = stack;
     hand_t *dealerHand = malloc(21*sizeof(card));
     hand_t *playerHand = malloc(21*sizeof(card));
@@ -69,11 +69,34 @@ void handOpenCardPlayer(){
 
 
 void drawTable(table_t *table) {
+    printf("dealer:\n");
     for (int i=0; i<21; i++) {
-        printf("%i", table->hand->cards[i].color);
+        printf("%i", table->dealer->cards[i].color);
     }
     printf("\n");
     for (int i=0; i<21; i++) {
-        printf("%i", table->hand->cards[i].face);
+        printf("%i", table->dealer->cards[i].face);
     }
-}*/
+    printf("player:\n");
+    for (int i=0; i<21; i++){
+        printf("%i", table->player->cards[i].color);
+    }
+    for (int i=0; i<21; i++) {
+        printf("%i", table->player->cards[i].face);      
+    }
+}
+
+int getValue(hand_t *hand) {
+    unsigned char value;
+    unsigned char aces = 0;
+    for (int i=0; i<21; i++) {
+        unsigned char cardValue = hand->cards[i].face;
+        if(cardValue == -1) {
+            break;
+        } else if (cardValue == 0) {
+            aces++;
+        } else {
+            value += cardValue + 1;
+        }
+    }
+}
