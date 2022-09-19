@@ -49,8 +49,13 @@ void main(){
 
 }
 
-table_t *generateTable(stack_t *stack) {
-    table_t *table = malloc(sizeof(stack) + 2*21*sizeof(card));
+void handOpenCardPlayer(){
+  int card = rand() % 311;
+  printf(card)
+}
+
+//table_t *generateTable(stack_t *stack) {
+  /*  table_t *table = malloc(sizeof(stack) + 2*21*sizeof(card));
     table->stack = stack;
     hand_t *dealerHand = malloc(21*sizeof(card));
     hand_t *playerHand = malloc(21*sizeof(card));
@@ -62,6 +67,7 @@ table_t *generateTable(stack_t *stack) {
     }
 }
 
+
 void drawTable(table_t *table) {
     for (int i=0; i<21; i++) {
         printf("%i", table->hand->cards[i].color);
@@ -70,4 +76,4 @@ void drawTable(table_t *table) {
     for (int i=0; i<21; i++) {
         printf("%i", table->hand->cards[i].face);
     }
-}
+}*/
