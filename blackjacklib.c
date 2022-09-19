@@ -37,8 +37,6 @@ stack_t *generateStack() {
   return(stack);ashed changes
 }
 
-void handOpenCard(table_t *table);
-
 void main(){
   stack_t *stack1 = generateStack();
 

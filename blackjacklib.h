@@ -45,6 +45,8 @@ typedef struct Table {
     hand_t *dealer;
     hand_t *player;
 } table_t;
+//finn
+void handOpenCard(table_t *table);
 
 stack_t *generateStack();
 
