@@ -24,17 +24,27 @@ deck_t *generateDeck() {
 }
 
 
-stack_t generateStack() {
-
+stack_t *generateStack() {
+  stack_t *stack = malloc(6*sizeof(deck_t));
+  deck_t *deck;
+  for (int i=0; i<6; i++){
+    deck = generateDeck();
+    for(int j=0; j<52; j++) {
+      stack->Cards[52*i+j].color = deck->Cards[j].color;
+      stack->Cards[52*i+j].face = deck->Cards[j].face;
+    }
+    free(deck);
+  }
+  return(stack);
 }
 
 void main(){
-  deck_t *deck1 = generateDeck();
+  stack_t *stack1 = generateStack();
 
-  for (int i = 0; i <= 51; i++){
+  for (int i = 0; i <= 311; i++){
 
     //printf(deck1->Cards[1].color, deck1->Cards[1].face);
-    printf("%i: %i, %i\n", i, deck1->Cards[i].color, deck1->Cards[i].face);
+    printf("%i: %i, %i\n", i, stack1->Cards[i].color, stack1->Cards[i].face);
 
   }
 

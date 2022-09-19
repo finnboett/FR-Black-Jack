@@ -29,4 +29,4 @@ typedef struct Table {
     stack_t Stack;
 } table_t;
 
-stack_t generateStack();
+stack_t *generateStack();
